@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#020a18">
+    <meta name="theme-color" content="#0f1a35">
     <meta name="description" content="Nexora Analytics — Data analytics consulting. Turn raw data into clear, actionable insights.">
     <title>Nexora Analytics | Data Intelligence</title>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -22,20 +22,20 @@
             theme: {
                 extend: {
                     colors: {
-                        "deep": "#020a18",
-                        "surface": "#041329",
-                        "surface-elevated": "#0a1f3d",
-                        "surface-glass": "rgba(10, 31, 61, 0.65)",
-                        "primary": "#00d4ff",
-                        "primary-dim": "#00a8cc",
-                        "primary-glow": "rgba(0, 212, 255, 0.15)",
-                        "accent": "#7c3aed",
+                        "deep": "#0f1a35",
+                        "surface": "#121f3c",
+                        "surface-elevated": "#1b2d54",
+                        "surface-glass": "rgba(27, 45, 84, 0.65)",
+                        "primary": "#2b6cf0",
+                        "primary-dim": "#1d4ed8",
+                        "primary-glow": "rgba(43, 108, 240, 0.15)",
+                        "accent": "#7c5cfc",
                         "accent-light": "#a78bfa",
-                        "neon-pink": "#ff006e",
-                        "neon-green": "#00ff9c",
-                        "text-primary": "#e8f4ff",
-                        "text-secondary": "#8ba3c7",
-                        "text-muted": "#4a6585"
+                        "neon-pink": "#d946ef",
+                        "neon-green": "#22d3ee",
+                        "text-primary": "#f0f4ff",
+                        "text-secondary": "#94a3b8",
+                        "text-muted": "#5d6894"
                     },
                     fontFamily: {
                         "display": ["Playfair Display", "serif"],
@@ -55,8 +55,8 @@
                             "50%": { transform: "translateY(-20px)" }
                         },
                         pulseGlow: {
-                            "0%, 100%": { boxShadow: "0 0 20px rgba(0, 212, 255, 0.3)" },
-                            "50%": { boxShadow: "0 0 40px rgba(0, 212, 255, 0.6)" }
+                            "0%, 100%": { boxShadow: "0 0 20px rgba(43, 108, 240, 0.3)" },
+                            "50%": { boxShadow: "0 0 40px rgba(43, 108, 240, 0.6)" }
                         },
                         slideUp: {
                             "0%": { opacity: "0", transform: "translateY(60px)" },
@@ -80,81 +80,81 @@
         html { color-scheme: dark; scroll-behavior: smooth; }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: #020a18;
-            color: #e8f4ff;
+            background: #0f1a35;
+            color: #f0f4ff;
             overflow-x: hidden;
         }
-        .skip-link { position: absolute; top: -40px; left: 0; background: #00d4ff; color: #020a18; padding: 8px 16px; z-index: 10001; transition: top 0.3s; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: #2b6cf0; color: #f0f4ff; padding: 8px 16px; z-index: 10001; transition: top 0.3s; }
         .skip-link:focus { top: 0; }
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #041329; }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #00d4ff, #7c3aed); border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #121f3c; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #2b6cf0, #7c5cfc); border-radius: 4px; }
         #bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
         @media (max-width: 768px) { #bg-canvas { display: none !important; } }
         #liquid-ether-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0.7; }
         @media (max-width: 768px) {
-            #liquid-ether-bg { opacity: 0.3; background: radial-gradient(ellipse at 30% 20%, rgba(0, 212, 255, 0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(124, 58, 237, 0.06) 0%, transparent 50%); }
+            #liquid-ether-bg { opacity: 0.3; background: radial-gradient(ellipse at 30% 20%, rgba(43, 108, 240, 0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(124, 92, 252, 0.06) 0%, transparent 50%); }
         }
         .perspective-container { perspective: 1500px; transform-style: preserve-3d; }
         .card-3d { transform-style: preserve-3d; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .card-3d:hover { transform: rotateY(8deg) rotateX(5deg) translateZ(20px); }
-        .glass { background: rgba(10, 31, 61, 0.65); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(0, 212, 255, 0.1); }
-        .glass-strong { background: rgba(10, 31, 61, 0.85); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); }
+        .glass { background: rgba(27, 45, 84, 0.65); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(43, 108, 240, 0.1); }
+        .glass-strong { background: rgba(27, 45, 84, 0.85); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); }
         @media (max-width: 768px) {
-            .glass { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); background: rgba(10, 31, 61, 0.8); }
-            .glass-strong { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background: rgba(10, 31, 61, 0.9); }
+            .glass { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); background: rgba(27, 45, 84, 0.8); }
+            .glass-strong { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background: rgba(27, 45, 84, 0.9); }
         }
         .gradient-text {
-            background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 50%, #ff006e 100%);
+            background: linear-gradient(135deg, #2b6cf0 0%, #7c5cfc 50%, #d946ef 100%);
             background-size: 200% 200%;
             animation: gradientShift 8s ease infinite;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .glow { box-shadow: 0 0 30px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.2), inset 0 0 30px rgba(0, 212, 255, 0.1); }
-        .glow-accent { box-shadow: 0 0 30px rgba(124, 58, 237, 0.4), 0 0 60px rgba(124, 58, 237, 0.2); }
+        .glow { box-shadow: 0 0 30px rgba(43, 108, 240, 0.3), 0 0 60px rgba(43, 108, 240, 0.2), inset 0 0 30px rgba(43, 108, 240, 0.1); }
+        .glow-accent { box-shadow: 0 0 30px rgba(124, 92, 252, 0.4), 0 0 60px rgba(124, 92, 252, 0.2); }
         .noise::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1; }
         .reveal { opacity: 0; transform: translateY(50px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .magnetic-btn { position: relative; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
         @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(2deg); } }
         .float { animation: float 6s ease-in-out infinite; }
-        @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); } 50% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); } }
+        @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 20px rgba(43, 108, 240, 0.3); } 50% { box-shadow: 0 0 40px rgba(43, 108, 240, 0.6); } }
         .pulse-glow { animation: pulseGlow 3s ease-in-out infinite; }
         @keyframes rotateSlow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         .rotate-slow { animation: rotateSlow 20s linear infinite; }
-        .grid-bg { background-image: linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px); background-size: 50px 50px; }
+        .grid-bg { background-image: linear-gradient(rgba(43, 108, 240, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(43, 108, 240, 0.03) 1px, transparent 1px); background-size: 50px 50px; }
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        .cursor-trail { position: fixed; width: 20px; height: 20px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 212, 255, 0.3), transparent); pointer-events: none; z-index: 9999; transition: transform 0.2s ease-out; mix-blend-mode: screen; }
+        .cursor-trail { position: fixed; width: 20px; height: 20px; border-radius: 50%; background: radial-gradient(circle, rgba(43, 108, 240, 0.3), transparent); pointer-events: none; z-index: 9999; transition: transform 0.2s ease-out; mix-blend-mode: screen; }
         @media (hover: none) and (pointer: coarse) { .cursor-trail { display: none !important; } }
-        .loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #020a18; display: flex; align-items: center; justify-content: center; z-index: 10000; transition: opacity 0.5s ease, visibility 0.5s ease; }
+        .loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0f1a35; display: flex; align-items: center; justify-content: center; z-index: 10000; transition: opacity 0.5s ease, visibility 0.5s ease; }
         .loader.hidden { opacity: 0; visibility: hidden; }
-        .loader-circle { width: 80px; height: 80px; border: 3px solid rgba(0, 212, 255, 0.1); border-top-color: #00d4ff; border-radius: 50%; animation: rotateSlow 1s linear infinite; }
-        .section-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 255, 0.3) 20%, rgba(124, 58, 237, 0.3) 50%, rgba(0, 212, 255, 0.3) 80%, transparent 100%); }
+        .loader-circle { width: 80px; height: 80px; border: 3px solid rgba(43, 108, 240, 0.1); border-top-color: #2b6cf0; border-radius: 50%; animation: rotateSlow 1s linear infinite; }
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(43, 108, 240, 0.3) 20%, rgba(124, 92, 252, 0.3) 50%, rgba(43, 108, 240, 0.3) 80%, transparent 100%); }
         @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; } .float, .pulse-glow, .rotate-slow { animation: none; } }
-        *:focus-visible { outline: 2px solid #00d4ff; outline-offset: 2px; }
-        a:focus-visible { outline: none; box-shadow: 0 0 0 2px #020a18, 0 0 0 4px #00d4ff; }
-        button:focus-visible { outline: none; box-shadow: 0 0 0 2px #020a18, 0 0 0 4px #00d4ff; }
-        select { background-color: rgba(10, 31, 61, 0.65); color: #e8f4ff; }
+        *:focus-visible { outline: 2px solid #2b6cf0; outline-offset: 2px; }
+        a:focus-visible { outline: none; box-shadow: 0 0 0 2px #0f1a35, 0 0 0 4px #2b6cf0; }
+        button:focus-visible { outline: none; box-shadow: 0 0 0 2px #0f1a35, 0 0 0 4px #2b6cf0; }
+        select { background-color: rgba(27, 45, 84, 0.65); color: #f0f4ff; }
         .nav-logo-container { perspective: 800px; text-decoration: none; }
-        .nav-logo-3d { width: 44px; height: 44px; border-radius: 12px; overflow: hidden; transform-style: preserve-3d; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, background 0.4s ease; box-shadow: 0 4px 15px rgba(0, 212, 255, 0.15), 0 0 0 1px rgba(0, 212, 255, 0.1); position: relative; background: rgba(4, 19, 41, 0.8); display: flex; align-items: center; justify-content: center; }
-        .nav-logo-3d::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(124, 58, 237, 0.05) 50%, rgba(255, 0, 110, 0.03) 100%); z-index: 1; border-radius: inherit; opacity: 0; transition: opacity 0.3s ease; }
-        .nav-logo-3d::after { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; background: linear-gradient(45deg, #00d4ff, #7c3aed, #ff006e, #00d4ff); background-size: 300% 300%; border-radius: 14px; z-index: -1; opacity: 0; animation: borderRotate 4s ease infinite; transition: opacity 0.3s ease; }
-        .nav-logo-3d svg, .nav-logo-3d img { width: 85%; height: 85%; object-fit: contain; position: relative; z-index: 2; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease; filter: drop-shadow(0 2px 4px rgba(0, 212, 255, 0.3)); }
-        .nav-logo-container:hover .nav-logo-3d { transform: rotateY(15deg) rotateX(-10deg) scale(1.1); box-shadow: 0 8px 30px rgba(0, 212, 255, 0.3), 0 0 0 1px rgba(0, 212, 255, 0.2), 0 0 20px rgba(124, 58, 237, 0.2); }
+        .nav-logo-3d { width: 44px; height: 44px; border-radius: 12px; overflow: hidden; transform-style: preserve-3d; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, background 0.4s ease; box-shadow: 0 4px 15px rgba(43, 108, 240, 0.15), 0 0 0 1px rgba(43, 108, 240, 0.1); position: relative; background: rgba(18, 31, 60, 0.8); display: flex; align-items: center; justify-content: center; }
+        .nav-logo-3d::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(43, 108, 240, 0.05) 0%, rgba(124, 92, 252, 0.05) 50%, rgba(217, 70, 239, 0.03) 100%); z-index: 1; border-radius: inherit; opacity: 0; transition: opacity 0.3s ease; }
+        .nav-logo-3d::after { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; background: linear-gradient(45deg, #2b6cf0, #7c5cfc, #d946ef, #2b6cf0); background-size: 300% 300%; border-radius: 14px; z-index: -1; opacity: 0; animation: borderRotate 4s ease infinite; transition: opacity 0.3s ease; }
+        .nav-logo-3d svg, .nav-logo-3d img { width: 85%; height: 85%; object-fit: contain; position: relative; z-index: 2; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease; filter: drop-shadow(0 2px 4px rgba(43, 108, 240, 0.3)); }
+        .nav-logo-container:hover .nav-logo-3d { transform: rotateY(15deg) rotateX(-10deg) scale(1.1); box-shadow: 0 8px 30px rgba(43, 108, 240, 0.3), 0 0 0 1px rgba(43, 108, 240, 0.2), 0 0 20px rgba(124, 92, 252, 0.2); }
         .nav-logo-container:hover .nav-logo-3d::before { opacity: 1; }
         .nav-logo-container:hover .nav-logo-3d::after { opacity: 0.6; }
-        .nav-logo-container:hover .nav-logo-3d svg, .nav-logo-container:hover .nav-logo-3d img { transform: scale(1.08); filter: drop-shadow(0 4px 8px rgba(0, 212, 255, 0.5)) drop-shadow(0 0 15px rgba(124, 58, 237, 0.3)); }
+        .nav-logo-container:hover .nav-logo-3d svg, .nav-logo-container:hover .nav-logo-3d img { transform: scale(1.08); filter: drop-shadow(0 4px 8px rgba(43, 108, 240, 0.5)) drop-shadow(0 0 15px rgba(124, 92, 252, 0.3)); }
         .footer-logo-container { perspective: 600px; text-decoration: none; }
-        .footer-logo-3d { width: 44px; height: 44px; border-radius: 12px; overflow: hidden; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, background 0.5s ease; box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1), 0 0 0 1px rgba(0, 212, 255, 0.05); position: relative; background: rgba(4, 19, 41, 0.6); display: flex; align-items: center; justify-content: center; }
-        .footer-logo-3d svg, .footer-logo-3d img { width: 85%; height: 85%; object-fit: contain; position: relative; z-index: 2; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease; filter: drop-shadow(0 2px 4px rgba(0, 212, 255, 0.2)); }
-        .footer-logo-container:hover .footer-logo-3d { transform: rotateY(20deg) rotateX(-15deg) scale(1.15); box-shadow: 0 10px 40px rgba(0, 212, 255, 0.25), 0 0 0 1px rgba(0, 212, 255, 0.15); }
-        .footer-logo-container:hover .footer-logo-3d svg, .footer-logo-container:hover .footer-logo-3d img { transform: scale(1.1); filter: drop-shadow(0 4px 8px rgba(0, 212, 255, 0.4)) drop-shadow(0 0 12px rgba(124, 58, 237, 0.25)); }
+        .footer-logo-3d { width: 44px; height: 44px; border-radius: 12px; overflow: hidden; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, background 0.5s ease; box-shadow: 0 4px 15px rgba(43, 108, 240, 0.1), 0 0 0 1px rgba(43, 108, 240, 0.05); position: relative; background: rgba(18, 31, 60, 0.6); display: flex; align-items: center; justify-content: center; }
+        .footer-logo-3d svg, .footer-logo-3d img { width: 85%; height: 85%; object-fit: contain; position: relative; z-index: 2; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease; filter: drop-shadow(0 2px 4px rgba(43, 108, 240, 0.2)); }
+        .footer-logo-container:hover .footer-logo-3d { transform: rotateY(20deg) rotateX(-15deg) scale(1.15); box-shadow: 0 10px 40px rgba(43, 108, 240, 0.25), 0 0 0 1px rgba(43, 108, 240, 0.15); }
+        .footer-logo-container:hover .footer-logo-3d svg, .footer-logo-container:hover .footer-logo-3d img { transform: scale(1.1); filter: drop-shadow(0 4px 8px rgba(43, 108, 240, 0.4)) drop-shadow(0 0 12px rgba(124, 92, 252, 0.25)); }
         @keyframes borderRotate { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         @media (max-width: 768px) {
-            .nav-logo-3d { width: 38px; height: 38px; box-shadow: 0 2px 10px rgba(0, 212, 255, 0.1); }
-            .nav-logo-container:hover .nav-logo-3d { transform: scale(1.08); box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2); }
+            .nav-logo-3d { width: 38px; height: 38px; box-shadow: 0 2px 10px rgba(43, 108, 240, 0.1); }
+            .nav-logo-container:hover .nav-logo-3d { transform: scale(1.08); box-shadow: 0 4px 15px rgba(43, 108, 240, 0.2); }
             .nav-logo-3d::after { display: none; }
             .footer-logo-3d { width: 38px; height: 38px; }
             .footer-logo-container:hover .footer-logo-3d { transform: scale(1.1); }
@@ -165,24 +165,24 @@
             .card-3d:hover { transform: none !important; }
             .perspective-container { perspective: none !important; }
             .float { animation-duration: 12s !important; }
-            .gradient-text { background-size: 100% 100% !important; animation: none !important; background: linear-gradient(135deg, #00d4ff 0%, #7c3aed 50%, #ff006e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-            .glow { box-shadow: 0 0 15px rgba(0, 212, 255, 0.15) !important; }
-            .glow-accent { box-shadow: 0 0 15px rgba(124, 58, 237, 0.2) !important; }
+            .gradient-text { background-size: 100% 100% !important; animation: none !important; background: linear-gradient(135deg, #2b6cf0 0%, #7c5cfc 50%, #d946ef 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .glow { box-shadow: 0 0 15px rgba(43, 108, 240, 0.15) !important; }
+            .glow-accent { box-shadow: 0 0 15px rgba(124, 92, 252, 0.2) !important; }
             .magnetic-btn { transition: none !important; }
-            .grid-bg { background-image: linear-gradient(rgba(0, 212, 255, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 212, 255, 0.02) 1px, transparent 1px); background-size: 80px 80px; }
+            .grid-bg { background-image: linear-gradient(rgba(43, 108, 240, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(43, 108, 240, 0.02) 1px, transparent 1px); background-size: 80px 80px; }
             .reveal { transform: translateY(20px) !important; }
             * { transition-duration: 0.15s !important; }
         }
         .glass, .card-3d, .magnetic-btn { transform: translateZ(0); will-change: auto; }
         @media (hover: none) and (pointer: coarse) { .float, .pulse-glow, .rotate-slow { animation: none !important; } *, *::before, *::after { transition-duration: 0.1s !important; animation-duration: 0.01ms !important; } }
         .pricing-table th, .pricing-table td { transition: background 0.3s ease; }
-        .pricing-table tr:hover td { background: rgba(0, 212, 255, 0.03); }
+        .pricing-table tr:hover td { background: rgba(43, 108, 240, 0.03); }
         .testimonial-card { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .testimonial-card:hover { transform: translateY(-4px); }
         .project-card { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
         .project-card:hover { transform: translateY(-6px); }
-        .available-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 100px; background: rgba(0, 255, 156, 0.1); border: 1px solid rgba(0, 255, 156, 0.25); font-family: 'Space Mono', monospace; font-size: 12px; color: #00ff9c; letter-spacing: 0.05em; }
-        .available-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #00ff9c; animation: pulseGlow 2s ease-in-out infinite; }
+        .available-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; border-radius: 100px; background: rgba(34, 211, 238, 0.1); border: 1px solid rgba(34, 211, 238, 0.25); font-family: 'Space Mono', monospace; font-size: 12px; color: #22d3ee; letter-spacing: 0.05em; }
+        .available-badge::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #22d3ee; animation: pulseGlow 2s ease-in-out infinite; }
     </style>
 </head>
 <body class="grid-bg">
@@ -201,30 +201,30 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="#home" class="flex items-center gap-3 group nav-logo-container">
                 <div class="nav-logo-3d">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-[85%] h-[85%] relative z-[2] drop-shadow-[0_2px_4px_rgba(0,212,255,0.3)] transition-all duration-400" style="filter:drop-shadow(0 2px 4px rgba(0,212,255,0.3))">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-[85%] h-[85%] relative z-[2]" style="filter:drop-shadow(0 2px 4px rgba(43,108,240,0.3))">
                       <defs>
-                        <linearGradient id="nb1" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="100%" style="stop-color:#00a8cc"/></linearGradient>
-                        <linearGradient id="nb2" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient>
-                        <linearGradient id="nb3" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#7c3aed"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
-                        <linearGradient id="nb4" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#7c3aed"/><stop offset="100%" style="stop-color:#ff006e"/></linearGradient>
-                        <radialGradient id="ng1"><stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/></radialGradient>
-                        <radialGradient id="ng2"><stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/></radialGradient>
-                        <radialGradient id="ng3"><stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/></radialGradient>
-                        <radialGradient id="ng4"><stop offset="0%" style="stop-color:#ff006e;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#ff006e;stop-opacity:0"/></radialGradient>
-                        <filter id="nshadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00d4ff" flood-opacity="0.4"/></filter>
+                        <linearGradient id="nb1" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#2b6cf0"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient>
+                        <linearGradient id="nb2" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#2b6cf0"/><stop offset="100%" style="stop-color:#7c5cfc"/></linearGradient>
+                        <linearGradient id="nb3" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#7c5cfc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+                        <linearGradient id="nb4" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#7c5cfc"/><stop offset="100%" style="stop-color:#d946ef"/></linearGradient>
+                        <radialGradient id="ng1"><stop offset="0%" style="stop-color:#2b6cf0;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#2b6cf0;stop-opacity:0"/></radialGradient>
+                        <radialGradient id="ng2"><stop offset="0%" style="stop-color:#2b6cf0;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#2b6cf0;stop-opacity:0"/></radialGradient>
+                        <radialGradient id="ng3"><stop offset="0%" style="stop-color:#7c5cfc;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#7c5cfc;stop-opacity:0"/></radialGradient>
+                        <radialGradient id="ng4"><stop offset="0%" style="stop-color:#d946ef;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#d946ef;stop-opacity:0"/></radialGradient>
+                        <filter id="nshadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2b6cf0" flood-opacity="0.4"/></filter>
                       </defs>
-                      <circle cx="50" cy="50" r="30" fill="none" stroke="#00d4ff" stroke-width="0.3" opacity="0.15"><animate attributeName="r" values="28;33;28" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.25;0.1" dur="3s" repeatCount="indefinite"/></circle>
+                      <circle cx="50" cy="50" r="30" fill="none" stroke="#2b6cf0" stroke-width="0.3" opacity="0.15"><animate attributeName="r" values="28;33;28" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.25;0.1" dur="3s" repeatCount="indefinite"/></circle>
                       <rect x="12" y="50" width="14" height="32" rx="4" fill="url(#nb1)" opacity="0.9"><animate attributeName="height" values="30;34;30" dur="2.5s" repeatCount="indefinite"/><animate attributeName="y" values="52;48;52" dur="2.5s" repeatCount="indefinite"/></rect>
                       <rect x="30" y="30" width="14" height="52" rx="4" fill="url(#nb2)" opacity="0.95"><animate attributeName="height" values="50;54;50" dur="2.5s" begin="0.2s" repeatCount="indefinite"/><animate attributeName="y" values="32;28;32" dur="2.5s" begin="0.2s" repeatCount="indefinite"/></rect>
                       <rect x="48" y="40" width="14" height="42" rx="4" fill="url(#nb3)" opacity="0.9"><animate attributeName="height" values="40;44;40" dur="2.5s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="y" values="42;38;42" dur="2.5s" begin="0.4s" repeatCount="indefinite"/></rect>
                       <rect x="66" y="14" width="14" height="68" rx="4" fill="url(#nb4)" opacity="1"><animate attributeName="height" values="66;70;66" dur="2.5s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="y" values="16;12;16" dur="2.5s" begin="0.6s" repeatCount="indefinite"/></rect>
                       <polyline points="19,48 37,28 55,38 73,12" fill="none" stroke="url(#nb2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><animate attributeName="stroke-dasharray" values="0,200;200,0" dur="1.5s" fill="freeze"/></polyline>
-                      <circle cx="19" cy="48" r="5" fill="url(#ng1)"><animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="19" cy="48" r="3.5" fill="#00d4ff" filter="url(#nshadow)"/>
-                      <circle cx="37" cy="28" r="5" fill="url(#ng2)"><animate attributeName="r" values="4;6;4" dur="1.8s" begin="0.2s" repeatCount="indefinite"/></circle><circle cx="37" cy="28" r="3.5" fill="#00d4ff" filter="url(#nshadow)"/>
-                      <circle cx="55" cy="38" r="5" fill="url(#ng3)"><animate attributeName="r" values="4;6;4" dur="1.8s" begin="0.4s" repeatCount="indefinite"/></circle><circle cx="55" cy="38" r="3.5" fill="#7c3aed" filter="url(#nshadow)"/>
-                      <circle cx="73" cy="12" r="6" fill="url(#ng4)"><animate attributeName="r" values="5;7;5" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></circle><circle cx="73" cy="12" r="4" fill="#ff006e" filter="url(#nshadow)"/>
-                      <circle cx="25" cy="18" r="1.2" fill="#00d4ff" opacity="0.5"><animate attributeName="cy" values="18;12;18" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
-                      <circle cx="80" cy="40" r="1" fill="#7c3aed" opacity="0.4"><animate attributeName="cy" values="40;32;40" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
+                      <circle cx="19" cy="48" r="5" fill="url(#ng1)"><animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="19" cy="48" r="3.5" fill="#2b6cf0" filter="url(#nshadow)"/>
+                      <circle cx="37" cy="28" r="5" fill="url(#ng2)"><animate attributeName="r" values="4;6;4" dur="1.8s" begin="0.2s" repeatCount="indefinite"/></circle><circle cx="37" cy="28" r="3.5" fill="#2b6cf0" filter="url(#nshadow)"/>
+                      <circle cx="55" cy="38" r="5" fill="url(#ng3)"><animate attributeName="r" values="4;6;4" dur="1.8s" begin="0.4s" repeatCount="indefinite"/></circle><circle cx="55" cy="38" r="3.5" fill="#7c5cfc" filter="url(#nshadow)"/>
+                      <circle cx="73" cy="12" r="6" fill="url(#ng4)"><animate attributeName="r" values="5;7;5" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></circle><circle cx="73" cy="12" r="4" fill="#d946ef" filter="url(#nshadow)"/>
+                      <circle cx="25" cy="18" r="1.2" fill="#2b6cf0" opacity="0.5"><animate attributeName="cy" values="18;12;18" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
+                      <circle cx="80" cy="40" r="1" fill="#7c5cfc" opacity="0.4"><animate attributeName="cy" values="40;32;40" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
                     </svg>
                 </div>
                 <span class="font-display font-bold text-xl tracking-tight">
@@ -858,28 +858,28 @@
                         <div class="footer-logo-3d">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="w-[85%] h-[85%] relative z-[2]">
                               <defs>
-                                <linearGradient id="fb1" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="100%" style="stop-color:#00a8cc"/></linearGradient>
-                                <linearGradient id="fb2" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#00d4ff"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient>
-                                <linearGradient id="fb3" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#7c3aed"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
-                                <linearGradient id="fb4" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#7c3aed"/><stop offset="100%" style="stop-color:#ff006e"/></linearGradient>
-                                <radialGradient id="fg1"><stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/></radialGradient>
-                                <radialGradient id="fg2"><stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0"/></radialGradient>
-                                <radialGradient id="fg3"><stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/></radialGradient>
-                                <radialGradient id="fg4"><stop offset="0%" style="stop-color:#ff006e;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#ff006e;stop-opacity:0"/></radialGradient>
-                                <filter id="fshadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00d4ff" flood-opacity="0.4"/></filter>
+                                <linearGradient id="fb1" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#2b6cf0"/><stop offset="100%" style="stop-color:#1d4ed8"/></linearGradient>
+                                <linearGradient id="fb2" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#2b6cf0"/><stop offset="100%" style="stop-color:#7c5cfc"/></linearGradient>
+                                <linearGradient id="fb3" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#7c5cfc"/><stop offset="100%" style="stop-color:#a78bfa"/></linearGradient>
+                                <linearGradient id="fb4" x1="0%" y1="100%" x2="0%" y2="0%"><stop offset="0%" style="stop-color:#7c5cfc"/><stop offset="100%" style="stop-color:#d946ef"/></linearGradient>
+                                <radialGradient id="fg1"><stop offset="0%" style="stop-color:#2b6cf0;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#2b6cf0;stop-opacity:0"/></radialGradient>
+                                <radialGradient id="fg2"><stop offset="0%" style="stop-color:#2b6cf0;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#2b6cf0;stop-opacity:0"/></radialGradient>
+                                <radialGradient id="fg3"><stop offset="0%" style="stop-color:#7c5cfc;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#7c5cfc;stop-opacity:0"/></radialGradient>
+                                <radialGradient id="fg4"><stop offset="0%" style="stop-color:#d946ef;stop-opacity:0.7"/><stop offset="100%" style="stop-color:#d946ef;stop-opacity:0"/></radialGradient>
+                                <filter id="fshadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#2b6cf0" flood-opacity="0.4"/></filter>
                               </defs>
-                              <circle cx="50" cy="50" r="30" fill="none" stroke="#00d4ff" stroke-width="0.3" opacity="0.15"><animate attributeName="r" values="28;33;28" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.25;0.1" dur="3s" repeatCount="indefinite"/></circle>
+                              <circle cx="50" cy="50" r="30" fill="none" stroke="#2b6cf0" stroke-width="0.3" opacity="0.15"><animate attributeName="r" values="28;33;28" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.1;0.25;0.1" dur="3s" repeatCount="indefinite"/></circle>
                               <rect x="12" y="50" width="14" height="32" rx="4" fill="url(#fb1)" opacity="0.9"><animate attributeName="height" values="30;34;30" dur="2.5s" repeatCount="indefinite"/><animate attributeName="y" values="52;48;52" dur="2.5s" repeatCount="indefinite"/></rect>
                               <rect x="30" y="30" width="14" height="52" rx="4" fill="url(#fb2)" opacity="0.95"><animate attributeName="height" values="50;54;50" dur="2.5s" begin="0.2s" repeatCount="indefinite"/><animate attributeName="y" values="32;28;32" dur="2.5s" begin="0.2s" repeatCount="indefinite"/></rect>
                               <rect x="48" y="40" width="14" height="42" rx="4" fill="url(#fb3)" opacity="0.9"><animate attributeName="height" values="40;44;40" dur="2.5s" begin="0.4s" repeatCount="indefinite"/><animate attributeName="y" values="42;38;42" dur="2.5s" begin="0.4s" repeatCount="indefinite"/></rect>
                               <rect x="66" y="14" width="14" height="68" rx="4" fill="url(#fb4)" opacity="1"><animate attributeName="height" values="66;70;66" dur="2.5s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="y" values="16;12;16" dur="2.5s" begin="0.6s" repeatCount="indefinite"/></rect>
                               <polyline points="19,48 37,28 55,38 73,12" fill="none" stroke="url(#fb2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><animate attributeName="stroke-dasharray" values="0,200;200,0" dur="1.5s" fill="freeze"/></polyline>
-                              <circle cx="19" cy="48" r="5" fill="url(#fg1)"><animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="19" cy="48" r="3.5" fill="#00d4ff" filter="url(#fshadow)"/>
-                              <circle cx="37" cy="28" r="5" fill="url(#fg2)"><animate attributeName="r" values="4;6;4" dur="1.8s" begin="0.2s" repeatCount="indefinite"/></circle><circle cx="37" cy="28" r="3.5" fill="#00d4ff" filter="url(#fshadow)"/>
-                              <circle cx="55" cy="38" r="5" fill="url(#fg3)"><animate attributeName="r" values="4;6;4" dur="1.8s" begin="0.4s" repeatCount="indefinite"/></circle><circle cx="55" cy="38" r="3.5" fill="#7c3aed" filter="url(#fshadow)"/>
-                              <circle cx="73" cy="12" r="6" fill="url(#fg4)"><animate attributeName="r" values="5;7;5" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></circle><circle cx="73" cy="12" r="4" fill="#ff006e" filter="url(#fshadow)"/>
-                              <circle cx="25" cy="18" r="1.2" fill="#00d4ff" opacity="0.5"><animate attributeName="cy" values="18;12;18" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
-                              <circle cx="80" cy="40" r="1" fill="#7c3aed" opacity="0.4"><animate attributeName="cy" values="40;32;40" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
+                              <circle cx="19" cy="48" r="5" fill="url(#fg1)"><animate attributeName="r" values="4;6;4" dur="1.8s" repeatCount="indefinite"/></circle><circle cx="19" cy="48" r="3.5" fill="#2b6cf0" filter="url(#fshadow)"/>
+                              <circle cx="37" cy="28" r="5" fill="url(#fg2)"><animate attributeName="r" values="4;6;4" dur="1.8s" begin="0.2s" repeatCount="indefinite"/></circle><circle cx="37" cy="28" r="3.5" fill="#2b6cf0" filter="url(#fshadow)"/>
+                              <circle cx="55" cy="38" r="5" fill="url(#fg3)"><animate attributeName="r" values="4;6;4" dur="1.8s" begin="0.4s" repeatCount="indefinite"/></circle><circle cx="55" cy="38" r="3.5" fill="#7c5cfc" filter="url(#fshadow)"/>
+                              <circle cx="73" cy="12" r="6" fill="url(#fg4)"><animate attributeName="r" values="5;7;5" dur="1.8s" begin="0.6s" repeatCount="indefinite"/></circle><circle cx="73" cy="12" r="4" fill="#d946ef" filter="url(#fshadow)"/>
+                              <circle cx="25" cy="18" r="1.2" fill="#2b6cf0" opacity="0.5"><animate attributeName="cy" values="18;12;18" dur="2.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
+                              <circle cx="80" cy="40" r="1" fill="#7c5cfc" opacity="0.4"><animate attributeName="cy" values="40;32;40" dur="3s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
                             </svg>
                         </div>
                         <span class="font-display font-bold text-xl tracking-tight">NEX<span class="text-primary">ORA</span> <span class="text-text-secondary font-semibold">A N A L Y T I C S</span></span>
@@ -953,7 +953,7 @@
             container.style.pointerEvents = 'none';
             container.style.opacity = '0.7';
 
-            const colors = ['#00d4ff', '#7c3aed', '#ff006e'];
+            const colors = ['#2b6cf0', '#7c5cfc', '#d946ef'];
             const mouseForce = 39;
             const cursorSize = 140;
             const isViscous = true;
